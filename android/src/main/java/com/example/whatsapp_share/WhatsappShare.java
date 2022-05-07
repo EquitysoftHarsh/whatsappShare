@@ -162,7 +162,7 @@ public class WhatsappShare implements FlutterPlugin, MethodCallHandler {
     }
 
     private void shareFile(MethodCall call, Result result) {
-        String filePaths = new ArrayList<String>();
+        ArrayList<String> filePaths = new ArrayList<String>();
         ArrayList<Uri> files = new ArrayList<Uri>();
         try
         {

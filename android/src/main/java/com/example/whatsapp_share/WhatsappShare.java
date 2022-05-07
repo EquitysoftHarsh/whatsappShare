@@ -194,11 +194,11 @@ public class WhatsappShare implements FlutterPlugin, MethodCallHandler {
             Intent intent = new Intent();
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            intent.setType("application/pdf");
+            intent.setType("*/*");
             intent.setPackage(packageName);
 //            intent.putExtra(Intent.EXTRA_SUBJECT, title);
 //            intent.putExtra(Intent.EXTRA_TEXT, text);
-            intent.putExtra(Intent.EXTRA_STREAM, files.get(0));
+            intent.putExtra(Intent.EXTRA_STREAM, files);
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
 //
             Intent chooserIntent = Intent.createChooser(intent, chooserTitle);

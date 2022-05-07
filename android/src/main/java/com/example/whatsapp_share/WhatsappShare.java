@@ -162,8 +162,8 @@ public class WhatsappShare implements FlutterPlugin, MethodCallHandler {
     }
 
     private void shareFile(MethodCall call, Result result) {
-        ArrayList<String> filePaths = new ArrayList<String>();
-        ArrayList<Uri> files = new ArrayList<Uri>();
+        String filePaths = new Striing();
+        Uri files = new Uri(filePaths);
         try
         {
             String title = call.argument("title");
@@ -185,11 +185,11 @@ public class WhatsappShare implements FlutterPlugin, MethodCallHandler {
                 return;
             }
 
-              for(int i=0;i<filePaths.size();i++){
-                File file = new File(filePaths.get(i));
-                Uri fileUri = FileProvider.getUriForFile(context, context.getApplicationContext().getPackageName() + ".provider", file);
-                files.add(fileUri);
-            }
+//              for(int i=0;i<filePaths.size();i++){
+//                File file = new File(filePaths.get(i));
+//                Uri fileUri = FileProvider.getUriForFile(context, context.getApplicationContext().getPackageName() + ".provider", file);
+//                files.add(fileUri);
+//            }
 
             Intent intent = new Intent();
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

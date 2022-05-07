@@ -194,7 +194,6 @@ public class WhatsappShare implements FlutterPlugin, MethodCallHandler {
             Intent intent = new Intent();
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            intent.setAction(Intent.ACTION_SEND_MULTIPLE);
             intent.setType("*/*");
             intent.setPackage(packageName);
             intent.putExtra(Intent.EXTRA_SUBJECT, title);

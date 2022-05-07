@@ -163,7 +163,8 @@ public class WhatsappShare implements FlutterPlugin, MethodCallHandler {
 
     private void shareFile(MethodCall call, Result result) {
         String filePaths = new String();
-        Uri files = new Uri(filePaths);
+        File file = new File(filePaths);
+        Uri files = FileProvider.getUriForFile(context, context.getApplicationContext().getPackageName() + ".provider", file);
         try
         {
             String title = call.argument("title");

@@ -2,7 +2,7 @@
 # To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
 #
 Pod::Spec.new do |s|
-  s.name             = 'whatsapp_share'
+  s.name             = 'whatsapp_share2'
   s.version          = '0.0.1'
   s.swift_version    = '4.1'
   s.summary          = 'Simple way to share a message, link or files from your flutter app'
